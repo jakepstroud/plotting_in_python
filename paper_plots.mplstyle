@@ -37,7 +37,7 @@ legend.fontsize	    : 5.5
 legend.frameon      : False
 
 #Remove grid and box
-axes.grid 	        : False
+axes.grid 	      : False
 axes.facecolor      : white
 axes.edgecolor      : black
 axes.spines.right   : False
