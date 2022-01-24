@@ -2,7 +2,7 @@ font.family         : sans-serif
 font.sans-serif     : Arial
 font.size           : 5.5
 text.color          : black
-pdf.fonttype	      : 42
+pdf.fonttype	    : 42
 
 figure.dpi          : 300
 figure.figsize      : 2.8, 2.05
@@ -12,7 +12,7 @@ lines.markersize    : 3
 lines.linewidth     : 1
 grid.linewidth      : 0.5
 image.cmap          : cividis
-image.origin	      : lower
+image.origin	    : lower
 
 axes.titlesize      : 6
 axes.labelsize      : 6
