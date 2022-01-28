@@ -12,6 +12,7 @@ plt.style.use(['ggplot','paper_plots'])
 
 def colorbar(mappable,label):
     from mpl_toolkits.axes_grid1 import make_axes_locatable
+    fig = plt.gcf()
     last_axes = plt.gca()
     ax = mappable.axes
     divider = make_axes_locatable(ax)
