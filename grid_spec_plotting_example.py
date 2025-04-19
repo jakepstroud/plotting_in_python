@@ -11,6 +11,21 @@ import matplotlib.gridspec as gridspec
 plt.style.use(['ggplot','paper_plots'])
 
 def colorbar(mappable,label):
+    """
+    Add a colorbar to the current axes.
+
+    Parameters
+    ----------
+    mappable : matplotlib.cm.ScalarMappable
+        The image, contour set, etc. to which the colorbar applies.
+    label : str
+        The label for the colorbar.
+
+    Returns
+    -------
+    matplotlib.colorbar.Colorbar
+        The colorbar object.
+    """
     from mpl_toolkits.axes_grid1 import make_axes_locatable
     fig = plt.gcf()
     last_axes = plt.gca()
@@ -25,7 +40,14 @@ def colorbar(mappable,label):
 
 #%% Plotting functions
 def gen_heatmap(ax0):
-    
+    """
+    Generate and display a 2D heatmap on the given axes.
+
+    Parameters
+    ----------
+    ax0 : matplotlib.axes.Axes
+        The axes on which to draw the heatmap.
+    """
     #Create data
     x = y = np.arange(-3.0, 3.01, 0.1)
     X, Y = np.meshgrid(x, y)
@@ -40,7 +62,14 @@ def gen_heatmap(ax0):
     colorbar(im,'color label')
 
 def gen_scatter(ax0):
-    
+    """
+    Generate and display a 2-group scatter plot with color mapping on the given axes.
+
+    Parameters
+    ----------
+    ax0 : matplotlib.axes.Axes
+        The axes on which to draw the scatter plot.
+    """
     #Create data
     x = np.arange(0,100)
     y = np.zeros((2,100))
@@ -69,7 +98,16 @@ def gen_scatter(ax0):
     colorbar(sc,'color label')
 
 def gen_trig_funs(fun_flag,ax0):
-    
+    """
+    Plot three phase-shifted trigonometric functions on the given axes.
+
+    Parameters
+    ----------
+    fun_flag : str
+        Type of trigonometric function to plot. One of: 'sin', 'cos', or 'tan'.
+    ax0 : matplotlib.axes.Axes
+        The axes on which to draw the trigonometric plots.
+    """
     #Create data
     x = np.linspace(0,4*np.pi,100)
     y = np.zeros((100,3))
